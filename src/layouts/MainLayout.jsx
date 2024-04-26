@@ -1,9 +1,12 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 
 const MainLayout = () => {
     return (
-        <div>
-            main
+        <div className="bg-[#ECEBE8]">
+            <Navbar />
+            <Outlet />
         </div>
     );
 };
