@@ -35,7 +35,7 @@ const AddCraft = () => {
         <div>
           <p className="mb-2">Craft Name</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("name")} />
+            <input type="text" className="grow" {...register("name", { required: true })} />
             {errors.name && (
               <span className="text-red-600 text-sm">Craft Name is required</span>
             )}
@@ -45,7 +45,7 @@ const AddCraft = () => {
         <div>
           <p className="mb-2">Category</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("category")} />
+            <input type="text" className="grow" {...register("category", { required: true })} />
             {errors.category && (
               <span className="text-red-600 text-sm">Category is required</span>
             )}
@@ -55,7 +55,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Image URL</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("image")} />
+            <input type="text" className="grow" {...register("image", { required: true })} />
             {errors.image && (
               <span className="text-red-600 text-sm">Image URL is required</span>
             )}
@@ -65,7 +65,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Sub-category</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("subCategory")} />
+            <input type="text" className="grow" {...register("subCategory", { required: true })} />
             {errors.subCategory && (
               <span className="text-red-600 text-sm">Sub Category is required</span>
             )}
@@ -75,7 +75,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Price</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("price")} />
+            <input type="text" className="grow" {...register("price", { required: true })} />
             {errors.price && (
               <span className="text-red-600 text-sm">Price is required</span>
             )}
@@ -85,7 +85,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Rating</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("rating")} />
+            <input type="text" className="grow" {...register("rating", { required: true })} />
             {errors.rating && (
               <span className="text-red-600 text-sm">Rating is required</span>
             )}
@@ -95,7 +95,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Customization</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("customization")} />
+            <input type="text" className="grow" {...register("customization", { required: true })} />
             {errors.customization && (
               <span className="text-red-600 text-sm">Customization is required</span>
             )}
@@ -105,7 +105,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Status</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("status")} />
+            <input type="text" className="grow" {...register("status", { required: true })} />
             {errors.status && (
               <span className="text-red-600 text-sm">Status is required</span>
             )}
@@ -115,8 +115,8 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">Proccessing Time</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("proccessingTime")} />
-            {errors.processingTime && (
+            <input type="text" className="grow" {...register("proccessingTime", { required: true })} />
+            {errors.proccessingTime && (
               <span className="text-red-600 text-sm">Processing Time is required</span>
             )}
           </label>
@@ -125,7 +125,7 @@ const AddCraft = () => {
         <div>
         <p className="mb-2">User Name</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("userName")} />
+            <input type="text" className="grow" {...register("userName", { required: true })} />
             {errors.userName && (
               <span className="text-red-600 text-sm">User Name is required</span>
             )}
@@ -135,7 +135,7 @@ const AddCraft = () => {
         <div className="">
         <p className="mb-2">User Email</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" className="grow" {...register("userEmail")} />
+            <input type="text" className="grow" {...register("userEmail", { required: true })} />
             {errors.userEmail && (
               <span className="text-red-600 text-sm">User Email is required</span>
             )}
