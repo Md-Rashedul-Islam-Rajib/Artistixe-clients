@@ -25,6 +25,8 @@ const nav = <>
     };
   }}
   ><li>Home</li></NavLink>
+
+
  <NavLink to='/allitems'
  className="rounded-xl p-1"
  style={({ isActive, isTransitioning }) => {
@@ -35,7 +37,9 @@ const nav = <>
     };
   }}
  ><li>All arts & Crafts</li></NavLink>
- <NavLink to='/additem'
+
+
+ {user && <NavLink to='/additem'
  className="rounded-xl p-1"
  style={({ isActive, isTransitioning }) => {
     return {
@@ -44,8 +48,10 @@ const nav = <>
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
- ><li>Add craft</li></NavLink>
- <NavLink to='/myitems'
+ ><li>Add craft</li></NavLink>}
+
+
+ {user && <NavLink to='/myitems'
  className="rounded-xl p-1"
  style={({ isActive, isTransitioning }) => {
     return {
@@ -54,8 +60,10 @@ const nav = <>
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
- ><li>My art & crafts list</li></NavLink>
- <NavLink to='/register'
+ ><li>My art & crafts list</li></NavLink>}
+
+
+ {!user && <NavLink to='/register'
  className="rounded-xl p-1"
  style={({ isActive, isTransitioning }) => {
     return {
@@ -64,7 +72,7 @@ const nav = <>
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
- ><li>Register</li></NavLink>
+ ><li>Register</li></NavLink>}
 
 </>
 
