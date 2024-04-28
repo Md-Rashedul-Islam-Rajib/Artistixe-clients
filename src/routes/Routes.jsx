@@ -9,6 +9,7 @@ import MyCraft from "../pages/MyCraft";
 import PrivateRoute from "../components/PrivateRoute";
 import CraftDetails from "../pages/CraftDetails";
 import CategoryCard from "../components/CategoryCard";
+import SubcategoryCardList from "../pages/SubcategoryCardList";
 
 
 
@@ -21,7 +22,7 @@ export const router = createBrowserRouter(
                 {
                     path: '/',
                     element: <Home />,
-                    loader: () => fetch('http://localhost:5000/art-homepage')
+                    loader: () => fetch('https://assignment-10-server-rho-one.vercel.app/art-homepage')
 
                 },
                 {
@@ -35,18 +36,19 @@ export const router = createBrowserRouter(
                 {
                     path: '/allitems',
                     element: <AllCraft />,
-                    loader: () => fetch('http://localhost:5000/art')
+                    loader: () => fetch('https://assignment-10-server-rho-one.vercel.app/art')
                 },
                 {
                     path: "/craftdetails/:id",
                     element: <PrivateRoute>
                         <CraftDetails></CraftDetails>
                     </PrivateRoute>,
-                    loader: ({params}) => fetch(`http://localhost:5000/art/${params.id}`)
+                    loader: ({params}) => fetch(`https://assignment-10-server-rho-one.vercel.app/art/${params.id}`)
                 },
                 {
                     path: "/allcrafts/:subcategory",
-                    element: <CategoryCard></CategoryCard>,
+                    element: <SubcategoryCardList></SubcategoryCardList>,
+                    loader: ({params}) => fetch(`https://assignment-10-server-rho-one.vercel.app/allcrafts/${params.subcategory}`)
                 },
 
                 {
@@ -56,10 +58,11 @@ export const router = createBrowserRouter(
                     </PrivateRoute>
                 },
                 {
-                    path: '/myitems', 
+                    path: '/myitems/:email', 
                     element: <PrivateRoute>
                         <MyCraft />
-                    </PrivateRoute>
+                    </PrivateRoute>,
+                    loader: ({params}) => fetch(`https://assignment-10-server-rho-one.vercel.app/myitems/${params.email}`)
                 }
             ]
         }

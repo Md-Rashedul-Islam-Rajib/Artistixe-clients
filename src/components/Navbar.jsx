@@ -7,7 +7,7 @@ import logo1 from '../assets/logo3.png'
 
 const Navbar = () => {
   const {user,logOutUser} = useContext(AuthContext);
-  console.log(user);
+  
   const handleSignOut = () => {
     logOutUser()
     toast.success('Logged out successfully')
@@ -51,7 +51,7 @@ const nav = <>
  ><li>Add craft</li></NavLink>}
 
 
- {user && <NavLink to='/myitems'
+ {user && <NavLink to={`/myitems/${user?.email}`}
  className="rounded-xl p-1"
  style={({ isActive, isTransitioning }) => {
     return {

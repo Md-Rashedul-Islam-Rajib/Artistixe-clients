@@ -51,7 +51,7 @@ const githubLogin = () => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
             if(currentUser){
                 setUser(currentUser)
-                console.log(currentUser);
+                
             }
             setLoading(false)
         });
