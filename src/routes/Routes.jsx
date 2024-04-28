@@ -10,6 +10,7 @@ import PrivateRoute from "../components/PrivateRoute";
 import CraftDetails from "../pages/CraftDetails";
 import CategoryCard from "../components/CategoryCard";
 import SubcategoryCardList from "../pages/SubcategoryCardList";
+import UpdateCraft from "../pages/UpdateCraft";
 
 
 
@@ -50,7 +51,11 @@ export const router = createBrowserRouter(
                     element: <SubcategoryCardList></SubcategoryCardList>,
                     loader: ({params}) => fetch(`https://assignment-10-server-rho-one.vercel.app/allcrafts/${params.subcategory}`)
                 },
-
+                {
+                    path: '/updatecraft/:id',
+                    element: <UpdateCraft></UpdateCraft>,
+                    loader: ({params}) => fetch(`https://assignment-10-server-rho-one.vercel.app/art/${params.id}`)
+                },
                 {
                     path: '/additem',
                     element: <PrivateRoute>

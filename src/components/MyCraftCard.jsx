@@ -70,7 +70,7 @@ const MyCraftCard = ({item,crafts,setCrafts}) => {
     <div className="card-actions justify-between">
     <Link to={`/craftdetails/${_id}`}><button className="btn btn-ghost btn-sm">View Details</button></Link>
     <button onClick={()=> handleDelete(_id)} className="btn btn-ghost btn-sm">Delete</button>
-    <Link to={`/craftdetails/${_id}`}><button className="btn btn-ghost btn-sm">Update</button></Link>
+    <Link to={`/updatecraft/${_id}`}><button className="btn btn-ghost btn-sm">Update</button></Link>
     </div>
   </div>
 </div>
