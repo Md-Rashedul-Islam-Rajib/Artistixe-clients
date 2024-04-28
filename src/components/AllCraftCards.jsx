@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import { GoStarFill } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 const AllCraftCards = ({ item }) => {
   const {
+    _id,
     name,
     shortDescription,
     image,
@@ -15,36 +17,43 @@ const AllCraftCards = ({ item }) => {
     userEmail,
     proccessingTime
   } = item;
+  
   return (
-    <div>
-      <div className="card w-96 glass">
-        <figure>
-          <img
-            src={image}
-            alt="car!"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">{name}</h2>
-          <p>{shortDescription}</p>
-
-            <div className="flex justify-between">
-                <div className="flex flex-col gap-4">
-                    <p>{subCategory}</p>
-                    <p>{proccessingTime} hours</p>
-                </div>
-                <div className="flex flex-col gap-4">
-                    <p>{price}</p>
-                    <p className="flex items-center gap-1">{rating}< GoStarFill className="text-[#E19756]" /></p>
-                </div>
+  
+      <tr className='text-center'>
+        
+        <td>
+          <div className="flex items-center gap-3 justify-center">
+            <div className="avatar">
+              <div className="mask mask-squircle w-16 h-16">
+                <img src={image} alt="Avatar Tailwind CSS Component" />
+              </div>
             </div>
-
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">View Details</button>
+            <div>
+              <div className="font-bold">{name}</div>
+              <div className="text-sm opacity-50">{subCategory}</div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </td>
+        <td>
+          {price}
+          <br/>
+          <p className="mt-2 badge-sm flex items-center justify-center gap-1"> <span>{rating}</span> < GoStarFill className="text-[#E19756]" /></p>
+        </td>
+        <td>{status}</td>
+        <th>
+          <Link to={`/craftdetails/${_id}`}><button className="btn btn-ghost btn-xs">View Details</button></Link>
+        </th>
+      </tr>
+
+
+
+
+
+
+      
+     
+    
   );
 };
 

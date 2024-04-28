@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useLoaderData } from 'react-router-dom';
 import AllCraftCards from '../components/AllCraftCards';
 
@@ -10,13 +10,36 @@ const AllCraft = () => {
       <h2 className="text-3xl font-extrabold">All Craft Items</h2>
     </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-            {
-                data.map((item,idx)=><AllCraftCards key={idx} item={item}></AllCraftCards>)
-            }
+            <div >
+            <div className="overflow-x-auto">
+  <table className="table">
+   
+    <thead>
+      <tr className='text-center'>
+        
+        <th> Craft Name</th>
+        <th>Price with rating</th>
+        <th>Availability</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {/* row 1 */}
+      {data.map((item,idx)=><AllCraftCards key={idx} item={item}></AllCraftCards>)}
+    
+      
+    </tbody>
+  
+    
+    
+  </table>
+</div>
+           
             </div>
         </div>
+    
     );
+
 };
 
 export default AllCraft;
