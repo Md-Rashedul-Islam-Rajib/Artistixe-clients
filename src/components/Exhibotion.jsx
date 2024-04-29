@@ -1,8 +1,8 @@
 const Exhibotion = () => {
   return (
-    <div>
-
-<div className="text-center mb-8">
+    <div className="mt-24">
+        
+      <div className="text-center mb-12">
         <h2 className="text-3xl font-extrabold">Exhibition with fun</h2>
       </div>
 
@@ -100,26 +100,50 @@ const Exhibotion = () => {
 
       <div className="flex px-16 gap-8 mt-8">
         <div className=" w-[30%] flex flex-col gap-4">
-            <h2 className="text-lg font-bold">Curated Visits</h2>
-            <p className="font-medium">Go beyond the surface and unlock the hidden stories within our exhibitions with a curated tour led by a museum expert.Our docents, specially trained in the intricacies of the current exhibition, will guide you on an insightful journey.Explore the themes and narratives that the curator weaved into the exhibition layout and object selection</p>
+          <h2 className="text-lg font-bold">Curated Visits</h2>
+          <p className="font-medium">
+            Go beyond the surface and unlock the hidden stories within our
+            exhibitions with a curated tour led by a museum expert.Our docents,
+            specially trained in the intricacies of the current exhibition, will
+            guide you on an insightful journey.Explore the themes and narratives
+            that the curator weaved into the exhibition layout and object
+            selection
+          </p>
         </div>
         <div className="flex gap-4 items-center justify-between w-[70%] px-8">
-        <div>
-            <div><h2 className="text-6xl">82</h2></div>
-            <div className="text-center"><p>Exhibitons</p></div>
-        </div>
-        <div>
-            <div><h2 className="text-6xl">100k</h2></div>
-            <div className="text-center"><p>Visitors</p></div>
-        </div>
-        <div>
-            <div><h2 className="text-6xl">15</h2></div>
-            <div className="text-center"><p>Awards</p></div>
-        </div>
-        <div>
-            <div><h2 className="text-6xl">500</h2></div>
-            <div className="text-center"> <p>Collections</p></div>
-        </div>
+          <div>
+            <div>
+              <h2 className="text-6xl">82</h2>
+            </div>
+            <div className="text-center">
+              <p>Exhibitons</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2 className="text-6xl">100k</h2>
+            </div>
+            <div className="text-center">
+              <p>Visitors</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2 className="text-6xl">15</h2>
+            </div>
+            <div className="text-center">
+              <p>Awards</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2 className="text-6xl">500</h2>
+            </div>
+            <div className="text-center">
+              {" "}
+              <p>Collections</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
