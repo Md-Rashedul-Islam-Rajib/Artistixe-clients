@@ -168,25 +168,9 @@ const UpdateCraft = () => {
           </label>
         </div>
 
-        <div>
-        <p className="font-bold mb-2">User Name</p>
-          <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" defaultValue={user? user?.displayName: null} className="grow" {...register("userName", { required: true })} />
-            {errors.userName && (
-              <span className="text-red-600 text-sm">User Name is required</span>
-            )}
-          </label>
-        </div>
+        
 
-        <div>
-        <p className="font-bold mb-2">User Email</p>
-          <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
-            <input type="text" defaultValue={user? user?.email: null} className="grow" {...register("userEmail", { required: true })} />
-            {errors.userEmail && (
-              <span className="text-red-600 text-sm">User Email is required</span>
-            )}
-          </label>
-        </div>
+       
 
 
             <div className="col-span-2 px-96">

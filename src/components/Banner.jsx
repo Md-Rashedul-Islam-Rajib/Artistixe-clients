@@ -6,7 +6,7 @@ import "swiper/css/bundle";
 
 const Banner = () => {
   return (
-    <div className="mt-8">
+    <div >
       <Swiper
         navigation={true}
         spaceBetween={30}
