@@ -3,6 +3,8 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
 import { AuthContext } from "../context/AuthProvider";
+import { Link } from "react-router-dom";
+import { IoMdArrowRoundBack } from "react-icons/io";
 
 
 const AddCraft = () => {
@@ -34,7 +36,9 @@ const AddCraft = () => {
     
   };
   return (
-    <div className="p-16">
+    <div className="p-2 md:p-8">
+
+<p className="my-4 text-xs lg:text-base"> <Link to='/' className="flex items-center"><IoMdArrowRoundBack /> <span className="font-semibold"> Add Craft /</span> Home</Link> </p>
 
     <div className="text-center mb-8">
       <h2 className="text-3xl font-extrabold">Add Craft Item</h2>
@@ -42,7 +46,7 @@ const AddCraft = () => {
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-2 gap-4"
+        className="grid md:grid-cols-2 gap-4"
       >
         <div>
           <p className="font-bold mb-2">Craft Name</p>
@@ -96,7 +100,7 @@ const AddCraft = () => {
           
         </div>
 
-        <div className="col-span-2">
+        <div className="md:col-span-2">
         <p className="font-bold mb-2">Short Description</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
             <input type="text" className="grow" {...register("shortDescription", { required: true })} />
@@ -174,7 +178,7 @@ const AddCraft = () => {
         </div>
 
 
-            <div className="col-span-2 px-96">
+            <div className="md:col-span-2 lg:px-96">
 
         <button className="btn bg-[#024CB5] text-white w-full">Add Craft</button>
             </div>

@@ -23,7 +23,7 @@ const AllCraftCards = ({ item }) => {
       <tr className='text-center'>
         
         <td>
-          <div className="flex items-center gap-3 justify-center">
+          <div className="flex items-center gap-1 md:gap-3 justify-center">
             <div className="avatar">
               <div className="mask mask-squircle w-16 h-16">
                 <img src={image} alt="Avatar Tailwind CSS Component" />

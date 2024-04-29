@@ -11,13 +11,13 @@ const PartOfUs = () => {
     <h2 className="text-3xl font-extrabold">Part Of The Art And Creativity</h2>
       </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 
                 <div className="flex p-4">
                     <div className="flex-1">
                         <img src={part1} alt="" />
                     </div>
-                    <div className="flex-1 flex flex-col gap-4 justify-center ml-6">
+                    <div className="flex-1 flex flex-col lg:gap-4 justify-center ml-6">
                         <h2 className="text-xl font-bold">The Work in Style</h2>
                         <h6 className="text-[#696140] font-semibold mb-6">Diana Manahis</h6>
                         <p className="font-medium">A Mexican painter known for her surreal self-portraits and vibrant depictions of Mexican culture. She often explored themes of identity, gender, and the human body, drawing inspiration from her own experiences with chronic pain and disability</p>

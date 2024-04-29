@@ -2,9 +2,10 @@
 import axios from 'axios';
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../context/AuthProvider';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const UpdateCraft = () => {
     const item = useLoaderData();
@@ -49,15 +50,16 @@ const UpdateCraft = () => {
         
       };
     return (
-        <div className="p-16">
+        <div className="p-2 md:p-8">
 
+<p className="my-4 text-xs lg:text-base"> <Link to='/' className="flex items-center"><IoMdArrowRoundBack /> <span className="font-semibold"> Update Craft /</span> Home</Link> </p>
     <div className="text-center mb-8">
       <h2 className="text-3xl font-extrabold">Update Craft Item Info</h2>
     </div>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="grid grid-cols-2 gap-4"
+        className="grid md:grid-cols-2 gap-4"
       >
         <div>
           <p className="font-bold mb-2">Craft Name</p>
@@ -111,7 +113,7 @@ const UpdateCraft = () => {
           
         </div>
 
-        <div className="col-span-2">
+        <div className="md:col-span-2">
         <p className="font-bold mb-2">Short Description</p>
           <label className="input input-bordered flex items-center gap-2 mb-2 md:mb-4">
             <input type="text" className="grow" defaultValue={shortDescription} {...register("shortDescription", { required: true })} />
@@ -173,7 +175,7 @@ const UpdateCraft = () => {
        
 
 
-            <div className="col-span-2 px-96">
+            <div className="md:col-span-2 lg:px-96">
 
         <button className="btn bg-[#024CB5] text-white w-full">Update Craft</button>
             </div>

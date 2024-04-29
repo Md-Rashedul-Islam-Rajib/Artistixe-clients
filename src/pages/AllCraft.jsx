@@ -1,11 +1,14 @@
 
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import AllCraftCards from '../components/AllCraftCards';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const AllCraft = () => {
     const data = useLoaderData();
     return (
-        <div className="p-16">
+        <div className="md:p-8">
+
+<p className="my-4 text-xs lg:text-base"> <Link to='/' className="flex items-center"><IoMdArrowRoundBack /> <span className="font-semibold"> All Craft /</span> Home</Link> </p>
             <div className="text-center mb-8">
       <h2 className="text-3xl font-extrabold">All Craft Items</h2>
     </div>

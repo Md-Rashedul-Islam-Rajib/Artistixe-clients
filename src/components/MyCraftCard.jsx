@@ -34,7 +34,7 @@ const MyCraftCard = ({item,crafts,setCrafts}) => {
           confirmButtonText: 'Yes, delete it'
         }).then((result)=>{
           if(result.isConfirmed){
-            axios.delete(`http://localhost:5000/myitems/${userEmail}/${_id}`)
+            axios.delete(`https://assignment-10-server-rho-one.vercel.app/myitems/${userEmail}/${_id}`)
         .then(data => {
           console.log(data.data)
           if(data.data.deletedCount > 0){

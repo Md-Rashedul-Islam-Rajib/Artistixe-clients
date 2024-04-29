@@ -4,6 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
 import logo1 from '../assets/logo.png'
+import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
   const {user,logOutUser} = useContext(AuthContext);
@@ -103,7 +104,7 @@ const nav = <>
         {nav}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl"><img className='h-12' src={logo1} alt="" /></a>
+    <Link to='/'><a className="btn btn-ghost text-xl"><img className='h-12' src={logo1} alt="" /></a></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 gap-4 font-bold">
@@ -115,7 +116,8 @@ const nav = <>
       user ? <div className='flex gap-4'>
         <div tabIndex={0} role="button" className="btn btn-sm md:btn-md btn-ghost btn-circle avatar" >
         <div className="w-10 rounded-full">
-          <img title={user? user?.displayName : "Name not Found"} alt="Tailwind CSS Navbar component" src={user?.photoURL ? user?.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+          <img data-tooltip-id="my-tooltip" data-tooltip-content={user? user?.displayName : "Name not Found"} alt="Tailwind CSS Navbar component" src={user?.photoURL ? user?.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
+          <Tooltip id="my-tooltip" />
         </div>
       </div>
       <div>
