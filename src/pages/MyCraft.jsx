@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import axios from "axios";
 import { AuthContext } from "../context/AuthProvider";
+import { FaFilter } from "react-icons/fa";
 
 const MyCraft = () => {
   const {user} = useContext(AuthContext);
@@ -27,7 +28,7 @@ const handleFilter = (event) => {
     })
   }
   if(response == "No"){
-    axios.get(`https://assignment-10-server-rho-one.vercel.app/${useremail}/customization_value_no`)
+    axios.get(`https://assignment-10-server-rho-one.vercel.app/myitems/${useremail}/customization_value_no`)
     .then(result => {
       console.log(result.data);
       const filterByNo = result.data;
@@ -84,8 +85,9 @@ const handleFilter = (event) => {
 
 
 
-              <div>
-              <select onChange={handleFilter} className="select select-accent">
+              <div className="flex justify-center lg:justify-end items-center gap-2 mb-6">
+                <span><FaFilter className="text-4xl text-[#024CB5]" /></span>
+              <select onChange={handleFilter} className="select select-info">
                 <option value="Default">Customization</option>
                 <option value="Yes">Yes</option>
                 <option value="No">No</option>
