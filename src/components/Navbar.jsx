@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../context/AuthProvider';
-import logo1 from '../assets/logo3.png'
+import logo1 from '../assets/logo.png'
 
 const Navbar = () => {
   const {user,logOutUser} = useContext(AuthContext);
@@ -17,7 +17,7 @@ useEffect(()=> {
   
   const handleToggle = (event) =>{
     if(event.target.checked){
-      setTheme('dark')
+      setTheme('luxury')
     }else{
       setTheme('light')
     }
@@ -93,7 +93,7 @@ const nav = <>
 
     return (
         <div className='pb-16'>
-            <div className="navbar bg-white shadow-lg px-4 fixed z-10">
+            <div className="navbar bg-base-200 shadow-lg px-4 fixed z-10">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
