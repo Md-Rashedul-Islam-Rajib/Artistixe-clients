@@ -8,9 +8,9 @@ import AddCraft from "../pages/AddCraft";
 import MyCraft from "../pages/MyCraft";
 import PrivateRoute from "../components/PrivateRoute";
 import CraftDetails from "../pages/CraftDetails";
-import CategoryCard from "../components/CategoryCard";
 import SubcategoryCardList from "../pages/SubcategoryCardList";
 import UpdateCraft from "../pages/UpdateCraft";
+import ErrorPage from "../pages/ErrorPage";
 
 
 
@@ -19,6 +19,7 @@ export const router = createBrowserRouter(
         {
             path: '/',
             element: <MainLayout />,
+            errorElement: <ErrorPage></ErrorPage>,
             children: [
                 {
                     path: '/',
