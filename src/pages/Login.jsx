@@ -12,7 +12,7 @@ const Login = () => {
 
     const [showPassword, setShowPassword] = useState(false);
 
-    const { logInUser, setUser, googleLogin, githubLogin, user } =
+    const { logInUser, setUser, googleLogin, githubLogin, user,theme } =
       useContext(AuthContext);
   
     const location = useLocation();
@@ -126,9 +126,9 @@ const Login = () => {
           )}
         </label>
 
-        <button className="btn bg-[#024CB5] text-white w-full">Log In</button>
+        <button className={`btn ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white w-full`}>Log In</button>
       </form>
-      <div className="flex justify-between my-4 text-[#024CB5] font-semibold">
+      <div className={`flex justify-between my-4 ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'} font-semibold`}>
         <p>New here?</p>
         <Link to="/register">
           <p>Create an account</p>

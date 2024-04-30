@@ -7,8 +7,8 @@ import logo1 from '../assets/logo.png'
 import { Tooltip } from 'react-tooltip'
 
 const Navbar = () => {
-  const {user,logOutUser} = useContext(AuthContext);
-  const [theme, setTheme] = useState('light');
+  const {user,logOutUser,theme,setTheme} = useContext(AuthContext);
+  
 
 useEffect(()=> {
   localStorage.setItem('theme',theme);
@@ -32,11 +32,11 @@ useEffect(()=> {
 
 const nav = <>
  <NavLink to='/'
- className="rounded-xl p-1"
+ className={`rounded-xl p-1 ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'}`}
  style={({ isActive, isTransitioning }) => {
     return {
-      background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "#827550",
+      background: isActive? `${theme=='luxury'? '#DCA54C': '#044FB2'}` : "",
+      color: isActive ? "white" : `${theme=='luxury'? '#DCA54C': 'black'}`,
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -44,11 +44,11 @@ const nav = <>
 
 
  <NavLink to='/allitems'
- className="rounded-xl p-1"
+ className={`rounded-xl p-1 ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'}`}
  style={({ isActive, isTransitioning }) => {
     return {
-      background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "#827550",
+      background: isActive? `${theme=='luxury'? '#DCA54C': '#044FB2'}` : "",
+      color: isActive ? "white" : `${theme=='luxury'? '#DCA54C': 'black'}`,
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -56,11 +56,11 @@ const nav = <>
 
 
  {user && <NavLink to='/additem'
- className="rounded-xl p-1"
+ className={`rounded-xl p-1 ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'}`}
  style={({ isActive, isTransitioning }) => {
     return {
-      background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "#827550",
+      background: isActive? `${theme=='luxury'? '#DCA54C': '#044FB2'}` : "",
+      color: isActive ? "white" : `${theme=='luxury'? '#DCA54C': 'black'}`,
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -68,11 +68,11 @@ const nav = <>
 
 
  {user && <NavLink to={`/myitems/${user?.email}`}
- className="rounded-xl p-1"
+ className={`rounded-xl p-1 ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'}`}
  style={({ isActive, isTransitioning }) => {
     return {
-      background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "#827550",
+      background: isActive? `${theme=='luxury'? '#DCA54C': '#044FB2'}` : "",
+      color: isActive ? "white" : `${theme=='luxury'? '#DCA54C': 'black'}`,
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -80,11 +80,11 @@ const nav = <>
 
 
  {!user && <NavLink to='/register'
- className="rounded-xl p-1"
+ className={`rounded-xl p-1 ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'}`}
  style={({ isActive, isTransitioning }) => {
     return {
-      background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "#827550",
+      background: isActive? `${theme=='luxury'? '#DCA54C': '#044FB2'}` : "",
+      color: isActive ? "white" : `${theme=='luxury'? '#DCA54C': 'black'}`,
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -121,12 +121,12 @@ const nav = <>
         </div>
       </div>
       <div>
-      <button onClick={handleSignOut} className='btn btn-sm md:btn-md bg-[#044FB2] text-white'>Log Out</button>
+      <button onClick={handleSignOut} className={`btn btn-sm md:btn-md ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white`}>Log Out</button>
       </div> 
       </div> 
       
       :
-      <Link to='/login' className="btn btn-sm md:btn-md bg-[#044FB2] dark:bg-[#DCA54C] text-white">Login</Link>
+      <Link to='/login' className={`btn btn-sm md:btn-md ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white`}>Login</Link>
     }
     <div>
     <label className="cursor-pointer grid place-items-center">

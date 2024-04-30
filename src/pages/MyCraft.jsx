@@ -8,7 +8,7 @@ import { FaFilter } from "react-icons/fa";
 
 
 const MyCraft = () => {
-  const {user} = useContext(AuthContext);
+  const {user,theme} = useContext(AuthContext);
   const useremail = user.email;
   console.log(useremail);
   const data = useLoaderData();
@@ -87,7 +87,7 @@ const handleFilter = (event) => {
 
 
               <div className="flex justify-center lg:justify-end items-center gap-2 mb-6">
-                <span><FaFilter className="text-4xl text-[#024CB5]" /></span>
+                <span><FaFilter className={`text-4xl ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'}`} /></span>
               <select onChange={handleFilter} className="select select-info">
                 <option value="Default">Customization</option>
                 <option value="Yes">Yes</option>

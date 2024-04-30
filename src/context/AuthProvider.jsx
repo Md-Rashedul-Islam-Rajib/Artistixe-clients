@@ -9,6 +9,7 @@ const AuthProvider = ({children}) => {
 
     const [loading, setLoading] = useState(true);
     const [user, setUser] = useState(null);
+    const [theme, setTheme] = useState('light');
     
     // register user
     const createUser = (email, password) => {
@@ -68,7 +69,9 @@ const githubLogin = () => {
         logOutUser,
         googleLogin,
         githubLogin,
-        loading
+        loading,
+        theme, 
+        setTheme
 }
     return (
         <AuthContext.Provider value={authInfo}>

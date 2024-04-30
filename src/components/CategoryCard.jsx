@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
 
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 
 const CategoryCard = ({item}) => {
+  const {theme} = useContext(AuthContext)
     const {
         
         name,
@@ -26,7 +29,7 @@ const CategoryCard = ({item}) => {
     <h2 className="card-title">{name}</h2>
     <p>{subCategory}</p>
     <div className="card-actions justify-end">
-      <Link to={`/allcrafts/${subCategory}`}><button className="btn btn-primary">View All</button></Link>
+      <Link to={`/allcrafts/${subCategory}`}><button className={`btn btn-sm md:btn-md ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white`}>View All</button></Link>
     </div>
   </div>
 </div>

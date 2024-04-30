@@ -8,7 +8,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 
 
 const AddCraft = () => {
-  const {user} = useContext(AuthContext);
+  const {user,theme} = useContext(AuthContext);
   
   const {
     register,
@@ -180,7 +180,7 @@ const AddCraft = () => {
 
             <div className="md:col-span-2 lg:px-96">
 
-        <button className="btn bg-[#024CB5] text-white w-full">Add Craft</button>
+        <button className={`btn ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white w-full`}>Add Craft</button>
             </div>
       </form>
     </div>
@@ -188,3 +188,4 @@ const AddCraft = () => {
 };
 
 export default AddCraft;
+

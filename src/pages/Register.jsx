@@ -13,7 +13,7 @@ import { AuthContext } from '../context/AuthProvider';
 
 const Register = () => {
 
-    const {createUser, logOutUser} = useContext(AuthContext);
+    const {createUser, logOutUser,theme} = useContext(AuthContext);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState("");
     const navigate = useNavigate();
@@ -85,10 +85,10 @@ const Register = () => {
   {errors.password && <p className="text-red-600 text-sm">Password is required</p>}
   {error && <p className="text-red-600 text-sm">{error}</p>}
 
-<button className="btn bg-[#024CB5] text-white w-full">Register</button>
+<button className={`btn ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white w-full`}>Register</button>
 </form>
 
-<div className="flex justify-between text-[#024CB5] font-semibold my-4">
+<div className={`flex justify-between ${theme=='luxury'? 'text-[#DCA54C]':'text-[#044FB2]'} font-semibold my-4`}>
     <p>Already have account?</p>
     <Link to='/login'><p>Login Here</p></Link>
 </div>

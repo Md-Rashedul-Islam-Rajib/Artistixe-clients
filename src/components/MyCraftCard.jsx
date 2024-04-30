@@ -1,12 +1,15 @@
 /* eslint-disable react/prop-types */
 
 import axios from "axios";
+import { useContext } from "react";
 import { GoStarFill } from "react-icons/go";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../context/AuthProvider";
 
 
 const MyCraftCard = ({item,crafts,setCrafts}) => {
+  const {theme} = useContext(AuthContext);
     const {
         _id,
         name,
@@ -68,9 +71,9 @@ const MyCraftCard = ({item,crafts,setCrafts}) => {
     </div>
       <p>Proccessing Time : {proccessingTime}</p>
     <div className="card-actions justify-between">
-    <Link to={`/craftdetails/${_id}`}><button className="btn btn-ghost btn-sm">View Details</button></Link>
-    <button onClick={()=> handleDelete(_id)} className="btn btn-ghost btn-sm">Delete</button>
-    <Link to={`/updatecraft/${_id}`}><button className="btn btn-ghost btn-sm">Update</button></Link>
+    <Link to={`/craftdetails/${_id}`}><button className={`btn text-white btn-ghost btn-sm ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'}`}>View Details</button></Link>
+    <button onClick={()=> handleDelete(_id)} className={`btn text-white btn-ghost btn-sm ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'}`}>Delete</button>
+    <Link to={`/updatecraft/${_id}`}><button className={`btn text-white btn-ghost btn-sm ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'}`}>Update</button></Link>
     </div>
   </div>
 </div>

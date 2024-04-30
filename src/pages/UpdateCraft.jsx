@@ -9,6 +9,7 @@ import { IoMdArrowRoundBack } from 'react-icons/io';
 
 const UpdateCraft = () => {
     const item = useLoaderData();
+    const {theme} = useContext(AuthContext);
     const {
         _id,
         name,
@@ -177,7 +178,7 @@ const UpdateCraft = () => {
 
             <div className="md:col-span-2 lg:px-96">
 
-        <button className="btn bg-[#024CB5] text-white w-full">Update Craft</button>
+        <button className={`btn ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white w-full`}>Update Craft</button>
             </div>
       </form>
     </div>

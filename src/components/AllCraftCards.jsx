@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { GoStarFill } from "react-icons/go";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const AllCraftCards = ({ item }) => {
+  const {theme} = useContext(AuthContext);
   const {
     _id,
     name,
@@ -42,7 +45,7 @@ const AllCraftCards = ({ item }) => {
         </td>
         <td className="hidden md:grid">{status}</td>
         <th>
-          <Link to={`/craftdetails/${_id}`}><button className="btn btn-ghost btn-xs">View Details</button></Link>
+          <Link to={`/craftdetails/${_id}`}><button className={`btn btn-xs ${theme=='luxury'? 'bg-[#DCA54C]':'bg-[#044FB2]'} text-white`}>View Details</button></Link>
         </th>
       </tr>
 
