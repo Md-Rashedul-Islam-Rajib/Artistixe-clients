@@ -20,10 +20,10 @@ const AllCraftCards = ({ item }) => {
   
   return (
   
-      <tr className='text-center'>
+      <tr>
         
         <td>
-          <div className="flex items-center gap-1 md:gap-3 justify-center">
+          <div className="flex items-center gap-1 md:gap-3">
             <div className="avatar">
               <div className="mask mask-squircle w-16 h-16">
                 <img src={image} alt="Avatar Tailwind CSS Component" />
@@ -38,9 +38,9 @@ const AllCraftCards = ({ item }) => {
         <td>
           {price}
           <br/>
-          <p className="mt-2 badge-sm flex items-center justify-center gap-1"> <span>{rating}</span> < GoStarFill className="text-[#E19756]" /></p>
+          <p className="mt-2 badge-sm flex items-center gap-1"> <span>{rating}</span> < GoStarFill className="text-[#E19756]" /></p>
         </td>
-        <td>{status}</td>
+        <td className="hidden md:grid">{status}</td>
         <th>
           <Link to={`/craftdetails/${_id}`}><button className="btn btn-ghost btn-xs">View Details</button></Link>
         </th>

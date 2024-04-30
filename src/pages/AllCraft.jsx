@@ -18,11 +18,11 @@ const AllCraft = () => {
   <table className="table">
    
     <thead>
-      <tr className='text-center'>
+      <tr>
         
         <th> Craft Name</th>
         <th>Price with rating</th>
-        <th>Availability</th>
+        <th className='hidden md:grid'>Availability</th>
         <th></th>
       </tr>
     </thead>

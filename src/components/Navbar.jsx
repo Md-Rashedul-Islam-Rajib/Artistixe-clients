@@ -36,7 +36,7 @@ const nav = <>
  style={({ isActive, isTransitioning }) => {
     return {
       background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "black",
+      color: isActive ? "white" : "#827550",
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -48,7 +48,7 @@ const nav = <>
  style={({ isActive, isTransitioning }) => {
     return {
       background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "black",
+      color: isActive ? "white" : "#827550",
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -60,7 +60,7 @@ const nav = <>
  style={({ isActive, isTransitioning }) => {
     return {
       background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "black",
+      color: isActive ? "white" : "#827550",
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -72,7 +72,7 @@ const nav = <>
  style={({ isActive, isTransitioning }) => {
     return {
       background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "black",
+      color: isActive ? "white" : "#827550",
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -84,7 +84,7 @@ const nav = <>
  style={({ isActive, isTransitioning }) => {
     return {
       background: isActive? "#044FB2" : "",
-      color: isActive ? "white" : "black",
+      color: isActive ? "white" : "#827550",
       viewTransitionName: isTransitioning ? "slide" : "",
     };
   }}
@@ -126,7 +126,7 @@ const nav = <>
       </div> 
       
       :
-      <Link to='/login' className="btn btn-sm md:btn-md bg-[#044FB2] text-white">Login</Link>
+      <Link to='/login' className="btn btn-sm md:btn-md bg-[#044FB2] dark:bg-[#DCA54C] text-white">Login</Link>
     }
     <div>
     <label className="cursor-pointer grid place-items-center">
